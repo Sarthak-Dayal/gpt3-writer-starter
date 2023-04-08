@@ -46,14 +46,14 @@ const Home = () => {
           </div>
           <div className='header-subtitle'>
             <h2>
-              input a uil question below, we'll give you all the surrounding
-              information you need to learn
+              input a science/comp-sci uil question below, we'll give you the
+              surrounding information you need to learn
             </h2>
           </div>
         </div>
         <div className='prompt-container'>
           <textarea
-            placeholder='high school or middle school uil question (answer choices optional)'
+            placeholder='high school or middle school uil question (performs better with answer choices)'
             className='prompt-box'
             value={userInput}
             onChange={onInputChange}
