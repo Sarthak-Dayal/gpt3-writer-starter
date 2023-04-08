@@ -8,9 +8,17 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix =
-  "Explain how I should answer this question, explain concepts for all answer choices when applicable, and tell me the concepts I should study further with specific resource links for an advanced high school student: ";
 export default async function generateAction(req, res) {
+  const voices = [
+    "pirate",
+    "donald duck",
+    "goofy (character)",
+    "batman",
+    "boss baby",
+  ];
+  const basePromptPrefix = `Explain how I should answer this question, explain concepts for all answer choices when applicable, and tell me the concepts I should study further with specific resource links for an advanced high school student in a ${
+    voices[Math.floor(Math.random() * voices.length)]
+  } voice: `;
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`);
 
