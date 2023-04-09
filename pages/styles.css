@@ -90,7 +90,7 @@ body {
   place-content: flex-start;
   align-items: flex-start;
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  border-radius: 3px;
   display: flex;
   flex: 0 0 auto;
   flex-flow: column nowrap;
@@ -172,7 +172,7 @@ textarea {
 .generate-button {
   place-content: flex-start;
   align-items: flex-start;
-  background-color: rgb(255, 79, 18);
+  background-color: rgb(8, 34, 92);
   border-radius: 100px;
   display: flex;
   flex: 0 0 auto;
