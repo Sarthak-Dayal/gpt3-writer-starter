@@ -13,7 +13,7 @@ const Home = () => {
 
   const callGenerateEndpoint = async () => {
     setIsGenerating(true);
-    console.log("Calling OpenAI...");
+
     const response = await fetch("/api/generate", {
       method: "POST",
       headers: {
@@ -24,7 +24,6 @@ const Home = () => {
 
     const data = await response.json();
     const { output } = data;
-    console.log("OpenAI replied...", output.text);
 
     setApiOutput(`${output.text}`);
     setIsGenerating(false);
@@ -37,7 +36,7 @@ const Home = () => {
   return (
     <div className='root'>
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>UIL Study Tool</title>
       </Head>
       <div className='container'>
         <div className='header'>
